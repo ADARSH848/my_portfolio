@@ -9,7 +9,7 @@ The site turns a robotics CV into a dynamic web experience with animated robot v
 Add your deployed Render URL here after deployment:
 
 ```text
-https://your-render-service-name.onrender.com
+https://adarsh-anand-karan.onrender.com
 ```
 
 ## Features
