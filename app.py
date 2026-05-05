@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, render_template
 
 
 app = Flask(__name__)
@@ -302,65 +302,6 @@ def index():
 @app.route("/api/profile")
 def api_profile():
     return jsonify(PROFILE)
-
-
-@app.route("/extract_variables", methods=["POST"])
-def extract_variables():
-    from core_runner import extract_var
-
-    data = request.json
-    solver = data.get("solver")
-    equations_raw = data.get("equations")
-    constants_raw = data.get("constants", "")
-
-    try:
-        equations_raw = equations_raw.strip()
-        eq_blocks = [block.strip() for block in equations_raw.split("---")]
-        equations = []
-
-        for block in eq_blocks:
-            lines = block.split("\n")
-            for line in lines:
-                clean = line.split("#", 1)[0].strip()
-                if clean:
-                    equations.append(clean)
-
-        results = extract_var(solver, equations, constants_raw)
-        output_str = ""
-        for key in results:
-            output_str += f"{key} = \n"
-
-        return jsonify({"success": True, "solution": output_str})
-    except Exception as exc:
-        return jsonify({"success": False, "error": str(exc)})
-
-
-@app.route("/solve", methods=["POST"])
-def solve():
-    from core_runner import solve_equations
-
-    data = request.json
-    solver = data.get("solver")
-    equations_raw = data.get("equations")
-    constants_raw = data.get("constants", "")
-    initial_guesses = data.get("initial_guesses", "")
-
-    try:
-        equations_raw = equations_raw.strip()
-        eq_blocks = [block.strip() for block in equations_raw.split("---")]
-        equations = []
-
-        for block in eq_blocks:
-            lines = block.split("\n")
-            for line in lines:
-                clean = line.split("#", 1)[0].strip()
-                if clean:
-                    equations.append(clean)
-
-        results = solve_equations(solver, equations, initial_guesses, constants_raw)
-        return jsonify({"success": True, "solution": results["log"]})
-    except Exception as exc:
-        return jsonify({"success": False, "error": str(exc)})
 
 
 if __name__ == "__main__":

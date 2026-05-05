@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Flask/runtime
+instance/
+*.log
+flask.out.log
+flask.err.log
+
+# Environment variables and local settings
+.env
+.env.*
+changes settings.txt
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build/cache artifacts
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
