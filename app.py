@@ -7,7 +7,7 @@ app = Flask(__name__)
 PROFILE = {
     "name": "Adarsh Anand Karan",
     "role": "Robotics Engineer | AI and Autonomous Systems",
-    "location": "Chennai, India",
+    "location": "Delhi, India",
     "email": "adarshkaran2002@gmail.com",
     "phone": "+91 8269214473",
     "linkedin": "https://linkedin.com/in/adarsh-anand-karan-116884261",
@@ -48,57 +48,46 @@ PROFILE = {
     "skills": [
         {
             "domain": "Programming",
-            "strength": 91,
             "items": ["Python", "C++", "Java", "C"],
-            "basis": (
-                "CV-weighted estimate from repeated Python/C++ use across "
-                "robotics, AI, simulation, and solver projects."
-            ),
+            "focus": "Robotics software, AI pipelines, simulation scripts, and engineering tools.",
+            "proof": "Used across solver logic, imitation learning experiments, perception prototypes, and robotics automation work.",
+            "output": "Clean code that turns math, sensors, and robot behavior into usable systems.",
         },
         {
             "domain": "Robotics and Simulation",
-            "strength": 95,
             "items": ["ROS2", "ROS", "Gazebo", "PyBullet", "RViz", "Matlab"],
-            "basis": (
-                "Highest score because your CV shows ROS2, PyBullet, Matlab, "
-                "URDF, SLAM, and simulation work across multiple robotics roles."
-            ),
+            "focus": "Robot modeling, validation, virtual testing, and simulation-led design.",
+            "proof": "Built URDF workflows, Matlab trajectory validation, PyBullet locomotion experiments, and ROS2 navigation systems.",
+            "output": "Simulation environments that reduce hardware risk before prototyping.",
         },
         {
             "domain": "Autonomous Systems",
-            "strength": 92,
             "items": ["SLAM", "Motion Planning", "Robot Control", "Navigation"],
-            "basis": (
-                "Based on SLAM pipelines, localization, path planning, docking, "
-                "quadruped control, and navigation-focused internship work."
-            ),
+            "focus": "Mapping, localization, path planning, robot control, and docking behavior.",
+            "proof": "Applied through underwater navigation, medical docking bots, mobile docking mechanisms, and quadruped control research.",
+            "output": "Robots that can sense, decide, move, and align with purpose.",
         },
         {
             "domain": "Hardware and Embedded",
-            "strength": 86,
             "items": [
                 "Raspberry Pi",
                 "Jetson Nano",
                 "Wiring Harness Design",
                 "Sensor Integration",
             ],
-            "basis": (
-                "Based on Raspberry Pi, Jetson Nano, Arduino hardware, vehicle "
-                "telemetry, wiring, dispensing, and sensor integration mentions."
-            ),
+            "focus": "Sensor integration, embedded controllers, telemetry, and hardware-software interfaces.",
+            "proof": "Built Arduino dispensing hardware, Formula Racing DAQ and telemetry, and multi-sensor robotics integrations.",
+            "output": "Reliable physical prototypes where electronics and software work together.",
         },
         {
             "domain": "CAD and Mechanical Design",
-            "strength": 89,
             "items": ["SolidWorks", "Fusion 360", "Mechanism Design"],
-            "basis": (
-                "Based on pipe inspection robot CAD, rural machine prototyping, "
-                "mechanism design, and the omni-directional docking patent."
-            ),
+            "focus": "Mechanical architecture, CAD modeling, mechanism design, and prototype-ready assemblies.",
+            "proof": "Designed pipe inspection robot CAD, rural machine prototypes, competition concepts, and a patented docking robot mechanism.",
+            "output": "Mechanisms designed for motion, manufacturability, and validation.",
         },
         {
             "domain": "Robotics Perception",
-            "strength": 88,
             "items": [
                 "Machine Learning",
                 "Deep Learning",
@@ -107,10 +96,9 @@ PROFILE = {
                 "TensorFlow",
                 "Feature Extraction",
             ],
-            "basis": (
-                "Based on OpenCV tracking, image processing, feature extraction, "
-                "classification models, and real-time perception work."
-            ),
+            "focus": "Computer vision, object tracking, image enhancement, feature extraction, and AI perception.",
+            "proof": "Built OpenCV tracking systems, robotic arm vision integration, image classification, and edge detection workflows.",
+            "output": "Perception modules that help robots interpret real-world scenes.",
         },
     ],
     "experience": [

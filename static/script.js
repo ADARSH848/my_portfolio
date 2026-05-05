@@ -137,12 +137,24 @@ function renderSkills() {
 
     const activeSkill = state.profile.skills[state.activeSkillIndex];
     selectors.skillPanel.innerHTML = `
-        <div class="skill-meter" style="--strength: ${activeSkill.strength}%">
-            <span>${activeSkill.strength}%</span>
+        <div class="skill-signal" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <div class="skill-copy">
             <h3>${activeSkill.domain}</h3>
-            <p class="skill-basis">${activeSkill.basis}</p>
+            <p class="skill-focus">${activeSkill.focus}</p>
+            <div class="skill-proof-grid">
+                <article>
+                    <span>Portfolio Proof</span>
+                    <strong>${activeSkill.proof}</strong>
+                </article>
+                <article>
+                    <span>Engineering Output</span>
+                    <strong>${activeSkill.output}</strong>
+                </article>
+            </div>
             <div class="skill-list">
                 ${activeSkill.items.map((item) => `<span>${item}</span>`).join("")}
             </div>
