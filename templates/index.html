@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Adarsh Anand Karan, robotics engineer focused on AI, autonomous systems, robot design, simulation, and perception.">
+    <title>Adarsh Anand Karan | Robotics Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body data-cv-url="{{ url_for('static', filename='CV_Adarsh_Anand_Karan_Robotics.pdf') }}">
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="Adarsh Anand Karan home">
+            <span class="brand-mark">AAK</span>
+            <span>Robotics Portfolio</span>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="#work">Work</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#research">Research</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="mode-button" type="button" id="modeToggle" aria-label="Toggle color mode">Mode</button>
+    </header>
+
+    <main>
+        <section class="hero section-band" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow">Robotics engineer for physical AI systems</p>
+                <h1>Adarsh Anand Karan</h1>
+                <p class="hero-lede">
+                    I build the full stack of intelligent robots: mechanical concepts,
+                    dynamic models, autonomous navigation, perception, and embedded
+                    prototypes that move from simulation into hardware.
+                </p>
+                <div class="hero-actions">
+                    <a class="primary-action" href="#work">Explore Work</a>
+                    <a class="secondary-action" id="cvDownload" href="{{ url_for('static', filename='CV_Adarsh_Anand_Karan_Robotics.pdf') }}" download>Download CV</a>
+                </div>
+                <div class="hero-meta" id="heroMeta" aria-label="Profile highlights"></div>
+            </div>
+            <div class="hero-visual" aria-label="Animated robotics docking simulation">
+                <canvas id="robotCanvas" width="760" height="640"></canvas>
+                <div class="telemetry-strip" aria-label="Portfolio telemetry">
+                    <span>SLAM</span>
+                    <span>Robot Control</span>
+                    <span>CAD</span>
+                    <span>Perception</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-band stats-band" aria-labelledby="signal-title">
+            <div class="section-heading">
+                <p class="eyebrow">Signal</p>
+                <h2 id="signal-title">Proof points from research, products, and robotics teams.</h2>
+            </div>
+            <div class="stats-grid" id="statsGrid"></div>
+        </section>
+
+        <section class="section-band work-section" id="work" aria-labelledby="work-title">
+            <div class="section-heading">
+                <p class="eyebrow">Selected Work</p>
+                <h2 id="work-title">Robotics systems across mechanisms, autonomy, AI, and perception.</h2>
+            </div>
+            <div class="filter-bar" id="projectFilters" aria-label="Project filters"></div>
+            <div class="project-grid" id="projectGrid"></div>
+        </section>
+
+        <section class="section-band skills-section" id="skills" aria-labelledby="skills-title">
+            <div class="section-heading">
+                <p class="eyebrow">Capability Map</p>
+                <h2 id="skills-title">A robotics stack that spans code, simulation, hardware, and design.</h2>
+            </div>
+            <div class="skills-layout">
+                <div class="skill-tabs" id="skillTabs" aria-label="Skill domains"></div>
+                <div class="skill-panel" id="skillPanel"></div>
+            </div>
+        </section>
+
+        <section class="section-band experience-section" id="experience" aria-labelledby="experience-title">
+            <div class="section-heading">
+                <p class="eyebrow">Experience</p>
+                <h2 id="experience-title">Hands-on robotics work with research labs, startups, and racing teams.</h2>
+            </div>
+            <div class="timeline" id="experienceTimeline"></div>
+        </section>
+
+        <section class="section-band research-section" id="research" aria-labelledby="research-title">
+            <div class="section-heading">
+                <p class="eyebrow">Research Output</p>
+                <h2 id="research-title">Patents and manuscripts that frame the engineering depth.</h2>
+            </div>
+            <div class="research-grid" id="researchGrid"></div>
+        </section>
+
+        <section class="section-band education-section" aria-labelledby="education-title">
+            <div class="section-heading">
+                <p class="eyebrow">Education</p>
+                <h2 id="education-title">Academic foundation in AI, robotics, and computer science.</h2>
+            </div>
+            <div class="education-grid" id="educationGrid"></div>
+        </section>
+
+        <section class="section-band certificate-section" aria-labelledby="cert-title">
+            <div class="section-heading">
+                <p class="eyebrow">Certificates</p>
+                <h2 id="cert-title">Continuous learning across ROS, autonomous systems, AI, and competitions.</h2>
+            </div>
+            <div class="certificate-track" id="certificateTrack"></div>
+        </section>
+
+        <section class="section-band contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="contact-copy">
+                <p class="eyebrow">Contact</p>
+                <h2 id="contact-title">Let us build robots that survive reality.</h2>
+                <p>
+                    Open to robotics research, autonomous systems, simulation, embedded
+                    AI, and product engineering roles.
+                </p>
+            </div>
+            <div class="contact-actions" id="contactActions"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span> Jai Hind!</span>
+        <a href="#home">Back to top</a>
+    </footer>
+</body>
+</html>

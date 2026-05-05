@@ -1,0 +1,6 @@
+gekko
+sympy
+scipy
+numpy
+flask
+gunicorn
